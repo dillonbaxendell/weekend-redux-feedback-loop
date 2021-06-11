@@ -5,6 +5,7 @@ import "./App.css";
 
 // import Components
 import Welcome from '../Welcome/Welcome';
+import Feeling from '../Feeling/Feeling';
 
 //import Router from react-router-dom
 import {
@@ -25,6 +26,9 @@ function App() {
       <Router>
        <Route path="/" exact>
          <Welcome />
+       </Route>
+       <Route path="/feeling">
+         <Feeling />
        </Route>
 
 

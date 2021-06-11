@@ -33,9 +33,14 @@ Set up (7) components
 [] Set up HTML
     [X] Add a header 'Welcome!"
     [X] Paragraph element explaining what this is?
-    [] Add button that takes them to the first page (Feeling)
+    [X] Add button that takes them to the first page (Feeling)
 
 2. Feeling Page
+[X] Feeling Folder created in Components
+[X] Feeling.jsx created in Feeling Folder
+    [X] import Feeling.css
+    [X] Export to App.jsx
+[X] Feeling.css 
 [] Set up HTML
     [] Add header: 'How are you feeling today?'
     [] Input created for 'Feeling?' 1-5
