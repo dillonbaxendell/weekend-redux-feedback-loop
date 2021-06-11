@@ -1,12 +1,13 @@
 ## TO-DO LIST
 
 ### Setup
-[] npm install
-[] npm run server
-[] npm run client
+[X] npm install
+[X] npm run server
+[X] npm run client
 
 //? What's missing?
 [] Setup router in App.jsx
+[] import router
     [] Route that links to Feeling page (/feeling)
     [] Route that links to Understanding page (/understanding)
     [] Route that links to Supported page (/support)
@@ -24,9 +25,14 @@
 Set up (7) components 
 
 1. Welcome Page
+[X] Welcome Folder created in Component
+[X] Welcome.jsx created in Welcome Folder
+    [X] import Welcome.css
+    [X] Export to App.jsx
+[X] Welcome.css created in Welcome Folder
 [] Set up HTML
-    [] Add a header 'Welcome!"
-    [] Paragraph element explaining what this is?
+    [X] Add a header 'Welcome!"
+    [X] Paragraph element explaining what this is?
     [] Add button that takes them to the first page (Feeling)
 
 2. Feeling Page
