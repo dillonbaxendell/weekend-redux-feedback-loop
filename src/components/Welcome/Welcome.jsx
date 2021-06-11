@@ -1,8 +1,14 @@
 //Import CSS
 import "./Welcome.css";
 
+//Other Imports
+import { useHistory } from "react-router-dom";
+
 // FUNCTION Welcome
 function Welcome() {
+  //Grab history so we can navigate to /feeling on button click
+  const history = useHistory();
+
   return (
     <>
       <div>
@@ -15,7 +21,13 @@ function Welcome() {
         </p>
       </div>
       <div>
-          <button>START SURVEY NOW</button>
+        <button
+          onClick={() => {
+            history.push("/feeling");
+          }}
+        >
+          START SURVEY NOW
+        </button>
       </div>
     </>
   );
