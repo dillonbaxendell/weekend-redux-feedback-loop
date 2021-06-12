@@ -44,7 +44,7 @@ Set up (7) components
 [X] Set up HTML
     [X] Add header: 'How are you feeling today?'
     [X] Input created for 'Feeling?' 1-5
-        [] this should dispatch to feedbackReducer feeling: score ???
+        [X] this should access props via FeedbackForm
     [X] Next button - takes us to route /understanding
 
 3. Understanding Page
@@ -52,36 +52,46 @@ Set up (7) components
 [X] Understanding.jsx created in Understanding Folder
     [X] import Understanding.css
     [X] Export to FeedbackForm.jsx
-[X] Feeling.css 
+[X] Understanding.css 
 [X] Set up HTML
     [X] Add header: 'How well are you understanding the content?'
     [X] Input created for 'Understanding?' 1-5
-        [] this should dispatch to feedbackReducer understanding: score ????
+        [X] this should access props via FeedbackForm
     [X] Next button = takes us to route /support
     
 4. Support Page
-[] Set up HTML
-    [] Add header: 'How well are you being supported?'
-    [] Input created for 'Support?' 1-5
-        [] this should dispatch to feedbackReducer support: score ????
-    [] Next button - takes us to route /comments
+[X] Support Folder created in Components
+[X] Support.jsx created in Support Folder
+    [X] import Support.css
+    [X] Export to FeedbackForm.jsx
+[X] Support.css 
+[X] Set up HTML
+    [X] Add header: 'How well are you being supported?'
+    [X] Input created for 'Support?' 1-5
+        [X] this should access props via FeedbackForm
+    [X] Next button - takes us to route /comments
 
 4. Comments Page
-[] Set up HTML
-    [] Add header: 'Any comments you want to leave?'
-    [] Input create for 'Comments'
-        [] this should dispatch to feedbackReducer comments: with whatever they left here
-        [] HINT: this input can be left blank
-    [] Next button - takes us to route /review
+[X] Comments Folder created in Components
+[X] Comments.jsx created in Comments Folder
+    [X] import Comments.css
+    [X] Export to FeedbackForm.jsx
+[X] Comments.css 
+[X] Set up HTML
+    [X] Add header: 'Any comments you want to leave?'
+    [X] Input create for 'Comments'
+        [X] this should access props via FeedbackForm
+        [X] HINT: this input can be left blank
+    [X] Next button - takes us to route /review
 
 5. Review Page
-[] Set up HTML
-    [] Add header: 'Review Your Feedback'
-    [] Feelings: {score}
-    [] Understanding: {score}
-    [] Support: {score}
-    [] Comments: {comments}
-    [] Submit button
+[X] Set up HTML
+    [X] Add header: 'Review Your Feedback'
+    [X] Feelings: {score}
+    [X] Understanding: {score}
+    [X] Support: {score}
+    [X] Comments: {comments}
+    [X] Submit button
         [] This should post the data to the database so that we can access it on admin
         [] Takes us to route /thanks
 

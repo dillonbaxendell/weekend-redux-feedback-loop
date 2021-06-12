@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 function Admin () {
     //Grab the feedbackList from feedbackReducer
     const feedbackList = useSelector( store => store.feedbackReducer);
-    
+
     //Use dispatch in the GET request
     const dispatch = useDispatch();
 
@@ -74,7 +74,7 @@ function Admin () {
 
         </>
     )
-}
+} // end Admin
 
-//EXPORT this function
+//EXPORT this function (found in FeedbackForm.jsx)
 export default Admin;

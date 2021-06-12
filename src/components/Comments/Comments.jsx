@@ -1,32 +1,29 @@
 //Import CSS
-import "./Support.css";
+import "./Comments.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
 
-//FUNCTION Support
-function Support({ support, setSupport }) {
+//FUNCTION Comments
+function Comments({ comments, setComments }) {
   //Grab history so we can navigate to /understanding on NEXT button click
   const history = useHistory();
-
   return (
     <>
       <div>
-        <h1>How well are you being supported?</h1>
+        <h1>Any Comments you want to leave?</h1>
       </div>
       <div>
         <input
-          type="number"
-          min="0"
-          max="5"
-          placeholder="Support?"
-          id="support"
-          value={support}
-          onChange={(event) => setSupport(event.target.value)}
+          type="text"
+          placeholder="Comments"
+          id="comments"
+          value={comments}
+          onChange={(event) => setComments(event.target.value)}
         />
         <button
           onClick={() => {
-            history.push("/comments");
+            history.push("/review");
           }}
         >
           NEXT
@@ -34,7 +31,7 @@ function Support({ support, setSupport }) {
       </div>
     </>
   );
-} // end Support
+} // end Comments
 
 //EXPORT this function (found in FeedbackForm.jsx)
-export default Support;
+export default Comments;

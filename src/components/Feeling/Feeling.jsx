@@ -5,7 +5,7 @@ import "./Feeling.css";
 import { useHistory } from "react-router-dom";
 
 //FUNCTION Feeling
-function Feeling({feeling, setFeeling}) {
+function Feeling({ feeling, setFeeling }) {
   //Grab history so we can navigate to /understanding on NEXT button click
   const history = useHistory();
 
@@ -34,7 +34,7 @@ function Feeling({feeling, setFeeling}) {
       </div>
     </>
   );
-}
+} // end Feeling
 
-//EXPORT this function
+//EXPORT this function (found in FeedbackForm.jsx)
 export default Feeling;

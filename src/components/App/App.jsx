@@ -4,14 +4,10 @@ import axios from "axios";
 import "./App.css";
 
 // import Components
-import FeedbackForm from '../FeedbackForm/FeedbackForm';
+import FeedbackForm from "../FeedbackForm/FeedbackForm";
 
-
-
+//FUNCTION App
 function App() {
-
-
-
   return (
     <div className="App">
       <header className="App-header">
@@ -20,10 +16,9 @@ function App() {
       </header>
 
       <FeedbackForm />
-
-
     </div>
   );
 }
 
+//EXPORT this function (found in index.js)
 export default App;
