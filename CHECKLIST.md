@@ -41,11 +41,11 @@ Set up (7) components
     [X] import Feeling.css
     [X] Export to App.jsx
 [X] Feeling.css 
-[] Set up HTML
-    [] Add header: 'How are you feeling today?'
-    [] Input created for 'Feeling?' 1-5
+[X] Set up HTML
+    [X] Add header: 'How are you feeling today?'
+    [X] Input created for 'Feeling?' 1-5
         [] this should dispatch to feedbackReducer feeling: score ???
-    [] Next button - takes us to route /understanding
+    [X] Next button - takes us to route /understanding
 
 3. Understanding Page
 [] Set up HTML
@@ -88,9 +88,17 @@ Set up (7) components
         [] and also reset the feedbackReducer to be empty
 
 7. Admin Page
+[] feedbackReducer created in Index.jsx
+    [] Case 'GET_FEEDBACK' created
+[] create a GET request with axios 
+    [] Admin.jsx
+        [] .then 
+            [] should dispatch to 'GET_FEEDBACK' and add the response.data as the payload
+        [] .catch
 [] Set up HTML
     [] table created with 
         Feeling, Comprehension, Support, Comments, Delete button
+    [] should map through the feedbackList to render in the table
     [] This should get the data from the database to display in the table
 
 

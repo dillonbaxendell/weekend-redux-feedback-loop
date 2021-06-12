@@ -6,6 +6,7 @@ import "./App.css";
 // import Components
 import Welcome from '../Welcome/Welcome';
 import Feeling from '../Feeling/Feeling';
+import Admin from '../Admin/Admin';
 
 //import Router from react-router-dom
 import {
@@ -35,7 +36,9 @@ function App() {
 
 
 
-
+        <Route path="/admin">
+          <Admin />
+        </Route>
       </Router>
     </div>
   );
