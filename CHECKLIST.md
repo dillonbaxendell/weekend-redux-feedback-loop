@@ -50,14 +50,14 @@ Set up (7) components
 3. Understanding Page
 [X] Understanding Folder created in Components
 [X] Understanding.jsx created in Understanding Folder
-    [] import Understanding.css
-    [] Export to FeedbackForm.jsx
+    [X] import Understanding.css
+    [X] Export to FeedbackForm.jsx
 [X] Feeling.css 
-[] Set up HTML
-    [] Add header: 'How well are you understanding the content?'
-    [] Input created for 'Understanding?' 1-5
+[X] Set up HTML
+    [X] Add header: 'How well are you understanding the content?'
+    [X] Input created for 'Understanding?' 1-5
         [] this should dispatch to feedbackReducer understanding: score ????
-    [] Next button = takes us to route /support
+    [X] Next button = takes us to route /support
     
 4. Support Page
 [] Set up HTML

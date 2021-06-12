@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Welcome from '../Welcome/Welcome';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
 import Admin from '../Admin/Admin';
 import Review from '../Review/Review';
 
@@ -43,9 +44,12 @@ function FeedbackForm () {
        <Route path="/feeling">
          <Feeling feeling={feeling} setFeeling={setFeeling}/>
        </Route>
-        <Router>
+        <Route>
             <Understanding understanding={understanding} setUnderstanding={setUnderstanding}/>
-        </Router>
+        </Route>
+        <Route>
+            <Support support={support} setSupport={setSupport} />
+        </Route>
 
       <Route path="/review">
         <Review />
