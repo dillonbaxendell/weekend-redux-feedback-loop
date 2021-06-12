@@ -24,12 +24,12 @@ const feedbackReducer = ( state = [], action ) => {
 //CREATE STORE
 const store = createStore(
     combineReducers({
-
+        feedbackReducer
 }), 
 applyMiddleware(logger)); // end store
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById("root")
