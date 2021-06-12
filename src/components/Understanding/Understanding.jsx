@@ -20,7 +20,7 @@ function Understanding({understanding, setUnderstanding}) {
         />
         <button
           onClick={() => {
-            history.push("/supported");
+            history.push("/support");
           }}
         >
           NEXT
