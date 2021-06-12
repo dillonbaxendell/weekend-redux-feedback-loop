@@ -10,7 +10,9 @@ feedbackRouter.get('/', (req, res) => {
       res.send(result.rows);
 })
 .catch( err => {
-    console.log('Error getting books', err);
+    console.log('Error getting feedback', err);
     res.sendStatus(500);
 });
 })
+
+module.exports = feedbackRouter;

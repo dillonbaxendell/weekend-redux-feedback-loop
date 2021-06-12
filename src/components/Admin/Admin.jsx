@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 function Admin () {
     //Grab the feedbackList from feedbackReducer
     const feedbackList = useSelector( store => store.feedbackReducer);
-
+    
     //Use dispatch in the GET request
     const dispatch = useDispatch();
 
