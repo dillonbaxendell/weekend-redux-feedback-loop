@@ -15,7 +15,20 @@ function Feeling() {
         <h1>How are you feeling today?</h1>
       </div>
       <div>
-          <input type="number" min="0" max="5" placeholder="Feeling?" id="feeling"/>
+        <input
+          type="number"
+          min="0"
+          max="5"
+          placeholder="Feeling?"
+          id="feeling"
+        />
+        <button
+          onClick={() => {
+            history.push("/understanding");
+          }}
+        >
+          NEXT
+        </button>
       </div>
     </>
   );
