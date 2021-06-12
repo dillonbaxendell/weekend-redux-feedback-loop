@@ -7,6 +7,7 @@ import { useState } from 'react';
 //Import components
 import Welcome from '../Welcome/Welcome';
 import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
 import Admin from '../Admin/Admin';
 import Review from '../Review/Review';
 
@@ -23,13 +24,12 @@ function FeedbackForm () {
     const [support, setSupport] = useState('');
     const [comments, setComments] = useState('');
 
-    console.log(feeling);
 
     //FUNCTION handleSubmit
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log('Adding feedback', )
+        console.log('Adding feedback', );
     }
 
     return (
@@ -43,7 +43,9 @@ function FeedbackForm () {
        <Route path="/feeling">
          <Feeling feeling={feeling} setFeeling={setFeeling}/>
        </Route>
-
+        <Router>
+            <Understanding understanding={understanding} setUnderstanding={setUnderstanding}/>
+        </Router>
 
       <Route path="/review">
         <Review />
