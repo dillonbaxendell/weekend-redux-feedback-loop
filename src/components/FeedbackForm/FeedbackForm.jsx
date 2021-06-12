@@ -44,10 +44,10 @@ function FeedbackForm () {
        <Route path="/feeling">
          <Feeling feeling={feeling} setFeeling={setFeeling}/>
        </Route>
-        <Route>
+        <Route path="/understanding">
             <Understanding understanding={understanding} setUnderstanding={setUnderstanding}/>
         </Route>
-        <Route>
+        <Route path="/support">
             <Support support={support} setSupport={setSupport} />
         </Route>
 
