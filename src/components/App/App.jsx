@@ -4,19 +4,14 @@ import axios from "axios";
 import "./App.css";
 
 // import Components
-import Welcome from '../Welcome/Welcome';
-import Feeling from '../Feeling/Feeling';
-import Admin from '../Admin/Admin';
+import FeedbackForm from '../FeedbackForm/FeedbackForm';
 
-//import Router from react-router-dom
-import {
-  Route,
-  HashRouter as Router,
-  Link,
-  useHistory,
-} from "react-router-dom";
+
 
 function App() {
+
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -24,22 +19,9 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
 
-      <Router>
-       <Route path="/" exact>
-         <Welcome />
-       </Route>
-       <Route path="/feeling">
-         <Feeling />
-       </Route>
+      <FeedbackForm />
 
 
-
-
-
-        <Route path="/admin">
-          <Admin />
-        </Route>
-      </Router>
     </div>
   );
 }
