@@ -3,6 +3,8 @@ import "./Admin.css";
 
 //Other Imports
 import {useSelector, useDispatch} from 'react-redux';
+import axios from "axios";
+import { useEffect } from 'react';
 
 //FUNCTION Admin
 function Admin () {
@@ -11,6 +13,33 @@ function Admin () {
 
     //Use dispatch in the GET request
     const dispatch = useDispatch();
+
+    //On page load, run these functions:
+    useEffect(() => {
+        getFeedback();
+      }, [])
+
+    //GET Feedback
+    const getFeedback = () => {
+        console.log('In getFeedback');
+
+        //axios to get feedback from database
+        //send to Index.js for redux
+        axios.get( '/feedback' )
+        .then( response => {
+            //console log response
+            console.log('Response from GET: ', response.data )
+            
+            //dispatch to redux
+            dispatch({
+                type: 'GET_FEEDBACK',
+                payload: response.data
+            });
+        })
+        .catch( err => {
+            console.log('Error in GET: ', err);
+        })
+    } // end getFeedback
 
     return (
         <>
