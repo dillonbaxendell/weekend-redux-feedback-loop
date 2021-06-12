@@ -33,5 +33,5 @@ function Welcome() {
   );
 } // end Welcome
 
-//EXPORT this function
+//EXPORT this function (found in FeedbackForm.jsx)
 export default Welcome;

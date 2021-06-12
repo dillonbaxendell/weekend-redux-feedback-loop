@@ -10,26 +10,22 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 
 //Feedback Reducer
-const feedbackReducer = ( state = [], action ) => {
-    switch (action.type) {
-        case 'GET_FEEDBACK' :
-            return action.payload;
-        default :
-            return state;
-    }
-}
-
-//New Feedback Reducer
-
-
-
+const feedbackReducer = (state = [], action) => {
+  switch (action.type) {
+    case "GET_FEEDBACK":
+      return action.payload;
+    default:
+      return state;
+  }
+};
 
 //CREATE STORE
 const store = createStore(
-    combineReducers({
-        feedbackReducer
-}), 
-applyMiddleware(logger)); // end store
+  combineReducers({
+    feedbackReducer,
+  }),
+  applyMiddleware(logger)
+); // end store
 
 ReactDOM.render(
   <Provider store={store}>
