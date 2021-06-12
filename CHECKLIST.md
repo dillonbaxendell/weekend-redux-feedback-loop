@@ -28,7 +28,7 @@ Set up (7) components
 [X] Welcome Folder created in Component
 [X] Welcome.jsx created in Welcome Folder
     [X] import Welcome.css
-    [X] Export to App.jsx
+    [X] Export to FeedbackForm.jsx
 [X] Welcome.css created in Welcome Folder
 [] Set up HTML
     [X] Add a header 'Welcome!"
@@ -39,7 +39,7 @@ Set up (7) components
 [X] Feeling Folder created in Components
 [X] Feeling.jsx created in Feeling Folder
     [X] import Feeling.css
-    [X] Export to App.jsx
+    [X] Export to FeedbackForm.jsx
 [X] Feeling.css 
 [X] Set up HTML
     [X] Add header: 'How are you feeling today?'
@@ -48,6 +48,11 @@ Set up (7) components
     [X] Next button - takes us to route /understanding
 
 3. Understanding Page
+[X] Understanding Folder created in Components
+[X] Understanding.jsx created in Understanding Folder
+    [] import Understanding.css
+    [] Export to FeedbackForm.jsx
+[X] Feeling.css 
 [] Set up HTML
     [] Add header: 'How well are you understanding the content?'
     [] Input created for 'Understanding?' 1-5
