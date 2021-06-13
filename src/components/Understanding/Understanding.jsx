@@ -52,6 +52,7 @@ function Understanding() {
           onChange={(event) => setUnderstanding(event.target.value)}
         />
         <button onClick={handleUnderstanding}>NEXT</button>
+        <button onClick={() => {history.goBack();}}>GO BACK</button>
       </div>
     </>
   );

@@ -47,6 +47,7 @@ function Review () {
         <button type="submit" placeholder="SUBMIT" onClick={handleSubmit}>
           SUBMIT
         </button>
+        <button onClick={() => {history.goBack();}}>GO BACK</button>
       </div>
     </>
   );

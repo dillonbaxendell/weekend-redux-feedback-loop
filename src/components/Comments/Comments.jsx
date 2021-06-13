@@ -46,6 +46,7 @@ function Comments () {
         >
           NEXT
         </button>
+        <button onClick={() => {history.goBack();}}>GO BACK</button>
       </div>
     </>
   );

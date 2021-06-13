@@ -52,6 +52,7 @@ function Support() {
           onChange={(event) => setSupport(event.target.value)}
         />
         <button onClick={handleSupport}>NEXT</button>
+        <button onClick={() => {history.goBack();}}>GO BACK</button>
       </div>
     </>
   );

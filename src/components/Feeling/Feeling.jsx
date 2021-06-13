@@ -51,6 +51,7 @@ function Feeling() {
           onChange={(event) => setFeeling(event.target.value)}
         />
         <button onClick={handleFeeling}>NEXT</button>
+        <button onClick={() => {history.push('/');}}>GO BACK</button>
       </div>
     </>
   );
