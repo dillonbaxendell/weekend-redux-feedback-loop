@@ -3,11 +3,30 @@ import "./Support.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import { useState } from "react";
 
 //FUNCTION Support
-function Support({ support, setSupport }) {
+function Support() {
+  const [support, setSupport] = useState('');
+  
+  //dispatch
+  const dispatch = useDispatch();
+
   //Grab history so we can navigate to /understanding on NEXT button click
   const history = useHistory();
+
+  //FUNCTION handleSupport
+  const handleSupport = () => {
+    dispatch({
+      type: 'SUPPORT',
+      payload: support
+    })
+
+    //Go to next page
+    history.push('/comments');
+
+  } // end handleSupport
 
   return (
     <>
@@ -25,9 +44,7 @@ function Support({ support, setSupport }) {
           onChange={(event) => setSupport(event.target.value)}
         />
         <button
-          onClick={() => {
-            history.push("/comments");
-          }}
+          onClick={handleSupport}
         >
           NEXT
         </button>

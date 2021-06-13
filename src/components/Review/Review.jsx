@@ -3,12 +3,19 @@ import "./Review.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
 import axios from "axios";
 
 //FUNCTION Review
-function Review({ newFeedback, clearInputs }) {
+function Review () {
   //Grab history so we can navigate to /feeling on button click
   const history = useHistory();
+
+  //dispatch
+  const dispatch = useDispatch();
+
+  //Grab data from Redux
+  const newFeedback = useSelector( store => store.feedbackReducer);
 
   //FUNCTION handleSubmit
   const handleSubmit = (event) => {
@@ -17,7 +24,9 @@ function Review({ newFeedback, clearInputs }) {
     //Axios POST
     axios.post("/feedback", newFeedback).then((response) => {
       //Set state variables to empty
-      clearInputs();
+      dispatch({
+        type: 'CLEAR_FEEDBACK',
+      })
       //go to next page
       history.push("/thanks");
     });

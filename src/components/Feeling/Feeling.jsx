@@ -3,11 +3,29 @@ import "./Feeling.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import { useState } from "react";
 
 //FUNCTION Feeling
-function Feeling({ feeling, setFeeling }) {
+function Feeling () {
+  const [feeling, setFeeling] = useState('');
+
+  //dispatch
+  const dispatch = useDispatch();
+
   //Grab history so we can navigate to /understanding on NEXT button click
   const history = useHistory();
+
+  const handleFeeling = () => {
+    dispatch({
+      type: 'FEELING',
+      payload: feeling
+    })
+
+    //Go to next page
+    history.push('/understanding');
+
+  } // end handleFeeling
 
   return (
     <>
@@ -25,9 +43,7 @@ function Feeling({ feeling, setFeeling }) {
           onChange={(event) => setFeeling(event.target.value)}
         />
         <button
-          onClick={() => {
-            history.push("/understanding");
-          }}
+          onClick={handleFeeling}
         >
           NEXT
         </button>
