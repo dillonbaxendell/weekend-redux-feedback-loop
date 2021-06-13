@@ -21,6 +21,8 @@ function Support() {
     //input validation
     if (support == "") {
       alert("You must enter a number 1-5 before continuing");
+    } else if (support < 0 || support > 5) {
+      alert("Please enter a number 0-5");
     } else {
       //dispatch to update variable in Redux
       dispatch({
@@ -37,6 +39,7 @@ function Support() {
     <>
       <div>
         <h1>How well are you being supported?</h1>
+        <p>Please enter a number 0-5 with 0 being the worst and 5 being the best</p>
       </div>
       <div>
         <input
