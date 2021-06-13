@@ -10,11 +10,13 @@ import Feeling from "../Feeling/Feeling";
 import Understanding from "../Understanding/Understanding";
 import Support from "../Support/Support";
 import Comments from "../Comments/Comments";
-import Admin from "../Admin/Admin";
 import Review from "../Review/Review";
+import ThankYou from "../ThankYou/ThankYou";
+import Admin from "../Admin/Admin";
 
 //import Router from react-router-dom
 import { Route, HashRouter as Router, useHistory } from "react-router-dom";
+
 
 //FUNCTION FeedbackForm
 function FeedbackForm() {
@@ -23,16 +25,23 @@ function FeedbackForm() {
   const [support, setSupport] = useState("");
   const [comments, setComments] = useState("");
 
-  //FUNCTION handleSubmit
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const clearInputs = () => {
+    setFeeling("");
+    setUnderstanding("");
+    setSupport("");
+    setComments("");
+  };
 
-    console.log("Adding feedback");
-  }; // end handleSubmit
+  const newFeedback = {
+    feeling: feeling,
+    understanding: understanding,
+    support: support,
+    comments: comments,
+  };
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form>
         <Router>
           <Route path="/" exact>
             <Welcome />
@@ -53,12 +62,10 @@ function FeedbackForm() {
             <Comments comments={comments} setComments={setComments} />
           </Route>
           <Route path="/review">
-            <Review
-              feeling={feeling}
-              understanding={understanding}
-              support={support}
-              comments={comments}
-            />
+            <Review newFeedback={newFeedback} clearInputs={clearInputs} />
+          </Route>
+          <Route path="/thanks">
+            <ThankYou />
           </Route>
           <Route path="/admin">
             <Admin />
