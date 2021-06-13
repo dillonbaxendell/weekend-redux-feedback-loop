@@ -5,7 +5,7 @@ const pool = require("../modules/pool");
 feedbackRouter.get("/", (req, res) => {
   console.log("getting all feedback");
   let queryText =
-    'SELECT feeling, understanding, support, comments FROM "feedback" ORDER BY "date";';
+    'SELECT id, feeling, understanding, support, comments FROM "feedback" ORDER BY "date";';
   pool
     .query(queryText)
     .then((result) => {
@@ -42,5 +42,21 @@ feedbackRouter.post("/", (req, res) => {
       res.sendStatus(500);
     });
 });
+
+feedbackRouter.delete( '/:id', (req, res) => {
+  //grab the id of the feedback to delete
+  itemToDelete = req.params.id;
+  console.log('Feedback to delete: ', itemToDelete);
+
+  const queryText = `DELETE FROM "feedback" WHERE "feedback".id = $1;`
+
+  pool.query( queryText, [itemToDelete] )
+    .then( response => {
+      console.log('Deleted feedback with ID#: ', itemToDelete);
+    })
+    .catch( err => {
+      console.log('Error in delete request', err);
+    })
+})
 
 module.exports = feedbackRouter;

@@ -41,6 +41,24 @@ function Admin () {
         })
     } // end getFeedback
 
+    //FUNCTION handleDelete
+    const handleDelete = (id) => {
+        console.log('clicked delete!');
+        
+        //Axios Delete Request
+        axios.delete( `/feedback/${id}`)
+        .then( response => {
+            console.log('Deleted feedback id#: ', id)
+            //Update the feedbackList
+            getFeedback();
+            //refresh window to get most updated data
+            window.location.reload();
+        })
+        .catch( err => {
+            console.log(err);
+        })
+    }
+
     return (
         <>
             <h1>Feedback Results</h1>
@@ -63,7 +81,7 @@ function Admin () {
                                     <td>{item.understanding}</td>
                                     <td>{item.support}</td>
                                     <td>{item.comments}</td>
-                                    <td><button>DELETE</button></td>
+                                    <td><button onClick={() => {handleDelete(item.id)}}>DELETE</button></td>
                                 </tr>
                             </>
                         ) 
