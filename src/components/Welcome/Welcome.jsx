@@ -3,6 +3,8 @@ import "./Welcome.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
+//Material-UI
+import Button from "@material-ui/core/Button";
 
 // FUNCTION Welcome
 function Welcome() {
@@ -21,13 +23,15 @@ function Welcome() {
         </p>
       </div>
       <div>
-        <button
+        <Button
+        variant="contained"
+        color="primary"
           onClick={() => {
             history.push("/feeling");
           }}
         >
           START SURVEY NOW
-        </button>
+        </Button>
       </div>
     </>
   );

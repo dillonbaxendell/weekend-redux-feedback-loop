@@ -3,6 +3,8 @@ import "./ThankYou.css";
 
 //Other imports
 import { useHistory } from "react-router-dom";
+//Material-UI
+import Button from "@material-ui/core/Button";
 
 //FUNCTION ThankYou
 function ThankYou() {
@@ -15,13 +17,15 @@ function ThankYou() {
         <h1>Thank You!</h1>
       </div>
       <div>
-        <button
+        <Button
+        variant="contained"
+        color="primary"
           onClick={() => {
             history.push("/");
           }}
         >
           Leave New Feedback
-        </button>
+        </Button>
       </div>
     </>
   );
