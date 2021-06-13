@@ -4,15 +4,15 @@
 
 _Duration: Weekend Sprint_
 
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it? 
+The goal of this project was to produce a multi-step form using React and Redux that allows users to leave feedback for the day. Feedback is collected over 4 views with the input data displayed in a separate Review page. Upon submission, the data is stored in the local database.
 
-This project tackles a multi-step form process primarily using React and Redux. Feedback is collected over four views with a separate review page to display the current feedback. The submit button will submit the data to your local database.
-
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
+The user also has the option to go to the NEXT page or go back one page using the GO BACK button. Some other features include: 
+- Input validation (user must enter a number 0-5 on required fields)
+- An `Admin` page that displays all of the feedback in a table to review the data.
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+Screenshots coming soon...
 
 ### Prerequisites
 
@@ -52,4 +52,4 @@ Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped m
 ## Support
 Thank you to my at-home support system: Paran, Jonathon, Seth and Vino. And a huge thank you to [Prime Digital Academy](https://www.primeacademy.io/) for the endless support and continuing feedback.
 
-If you have suggestions or issues, please email me at [youremail@whatever.com](www.google.com)
+If you have suggestions or issues, please email me at [dillon.j.baxendell@gmail.com](www.gmail.com)
