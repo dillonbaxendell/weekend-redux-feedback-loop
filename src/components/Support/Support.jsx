@@ -3,13 +3,13 @@ import "./Support.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 //FUNCTION Support
 function Support() {
-  const [support, setSupport] = useState('');
-  
+  const [support, setSupport] = useState("");
+
   //dispatch
   const dispatch = useDispatch();
 
@@ -18,15 +18,20 @@ function Support() {
 
   //FUNCTION handleSupport
   const handleSupport = () => {
-    dispatch({
-      type: 'SUPPORT',
-      payload: support
-    })
+    //input validation
+    if (support == "") {
+      alert("You must enter a number 1-5 before continuing");
+    } else {
+      //dispatch to update variable in Redux
+      dispatch({
+        type: "SUPPORT",
+        payload: support,
+      });
 
-    //Go to next page
-    history.push('/comments');
-
-  } // end handleSupport
+      //Go to next page
+      history.push("/comments");
+    }
+  }; // end handleSupport
 
   return (
     <>
@@ -43,11 +48,7 @@ function Support() {
           value={support}
           onChange={(event) => setSupport(event.target.value)}
         />
-        <button
-          onClick={handleSupport}
-        >
-          NEXT
-        </button>
+        <button onClick={handleSupport}>NEXT</button>
       </div>
     </>
   );

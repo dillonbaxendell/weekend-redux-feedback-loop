@@ -3,30 +3,35 @@ import "./Understanding.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 //FUNCTION Understanding
-function Understanding () {
-    const [understanding, setUnderstanding] = useState('');
-  
-    //dispatch
-    const dispatch = useDispatch();
-  
-    //Grab history so we can navigate to /understanding on NEXT button click
-    const history = useHistory();
+function Understanding() {
+  const [understanding, setUnderstanding] = useState("");
 
-    //FUNCTION handleUnderstanding
-    const handleUnderstanding = () => {
+  //dispatch
+  const dispatch = useDispatch();
+
+  //Grab history so we can navigate to /understanding on NEXT button click
+  const history = useHistory();
+
+  //FUNCTION handleUnderstanding
+  const handleUnderstanding = () => {
+    //input validation
+    if (understanding == "") {
+      alert("You must enter a number 1-5 before continuing");
+    } else {
+      //dispatch to update variable in Redux
       dispatch({
-        type: 'UNDERSTANDING',
-        payload: understanding
-      })
-  
+        type: "UNDERSTANDING",
+        payload: understanding,
+      });
+
       //Go to next page
-      history.push('/support');
-  
-    } // end handleUnderstanding
+      history.push("/support");
+    }
+  }; // end handleUnderstanding
 
   return (
     <>
@@ -43,11 +48,7 @@ function Understanding () {
           value={understanding}
           onChange={(event) => setUnderstanding(event.target.value)}
         />
-        <button
-          onClick={handleUnderstanding}
-        >
-          NEXT
-        </button>
+        <button onClick={handleUnderstanding}>NEXT</button>
       </div>
     </>
   );

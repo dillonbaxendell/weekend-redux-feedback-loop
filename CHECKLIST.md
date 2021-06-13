@@ -132,3 +132,8 @@ Set up (9) components
     [X] This should get the data from the database to display in the table
 
 
+### Input Validation
+
+[] Each step should only allow the user to advance to the next step if a score was provided. Be sure to tell the user in some way that a value must be provided.
+
+The `Comments` step does not need to be validated, an empty value is okay.

@@ -3,12 +3,12 @@ import "./Feeling.css";
 
 //Other Imports
 import { useHistory } from "react-router-dom";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 //FUNCTION Feeling
-function Feeling () {
-  const [feeling, setFeeling] = useState('');
+function Feeling() {
+  const [feeling, setFeeling] = useState("");
 
   //dispatch
   const dispatch = useDispatch();
@@ -17,15 +17,20 @@ function Feeling () {
   const history = useHistory();
 
   const handleFeeling = () => {
-    dispatch({
-      type: 'FEELING',
-      payload: feeling
-    })
+    //input validation
+    if (feeling == "") {
+      alert("You must enter a number 1-5 before continuing");
+    } else {
+      //dispatch to update variable in Redux
+      dispatch({
+        type: "FEELING",
+        payload: feeling,
+      });
 
-    //Go to next page
-    history.push('/understanding');
-
-  } // end handleFeeling
+      //Go to next page
+      history.push("/understanding");
+    }
+  }; // end handleFeeling
 
   return (
     <>
@@ -42,11 +47,7 @@ function Feeling () {
           value={feeling}
           onChange={(event) => setFeeling(event.target.value)}
         />
-        <button
-          onClick={handleFeeling}
-        >
-          NEXT
-        </button>
+        <button onClick={handleFeeling}>NEXT</button>
       </div>
     </>
   );
