@@ -5,6 +5,9 @@ import "./Understanding.css";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+//Material-UI
+import Button from "@material-ui/core/Button";
+import {TextField} from '@material-ui/core';
 
 //FUNCTION Understanding
 function Understanding() {
@@ -42,17 +45,19 @@ function Understanding() {
         <p>Please enter a number 0-5 with 0 being the worst and 5 being the best</p>
       </div>
       <div>
-        <input
+        <TextField
+        required
+          label="Understanding?"
           type="number"
           min="0"
           max="5"
-          placeholder="Understanding?"
+          placeholder="How well are you understanding?"
           id="understanding"
           value={understanding}
           onChange={(event) => setUnderstanding(event.target.value)}
         />
-        <button onClick={handleUnderstanding}>NEXT</button>
-        <button onClick={() => {history.goBack();}}>GO BACK</button>
+        <Button variant="contained" color="primary" onClick={handleUnderstanding}>NEXT</Button>
+        <Button variant="outlined" color="primary" onClick={() => {history.goBack();}}>GO BACK</Button>
       </div>
     </>
   );

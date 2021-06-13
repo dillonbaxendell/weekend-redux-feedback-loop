@@ -5,6 +5,8 @@ import "./Review.css";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import axios from "axios";
+//Material-UI
+import Button from "@material-ui/core/Button";
 
 //FUNCTION Review
 function Review () {
@@ -44,10 +46,10 @@ function Review () {
         <h3>Comments: {newFeedback.comments}</h3>
       </div>
       <div>
-        <button type="submit" placeholder="SUBMIT" onClick={handleSubmit}>
+        <Button variant="contained" color="primary" type="submit" placeholder="SUBMIT" onClick={handleSubmit}>
           SUBMIT
-        </button>
-        <button onClick={() => {history.goBack();}}>GO BACK</button>
+        </Button>
+        <Button variant="outlined" color="primary" onClick={() => {history.goBack();}}>GO BACK</Button>
       </div>
     </>
   );

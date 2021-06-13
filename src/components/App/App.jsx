@@ -6,9 +6,26 @@ import "./App.css";
 // import Components
 import FeedbackForm from "../FeedbackForm/FeedbackForm";
 
+//Material-UI imports
+import '@fontsource/roboto';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+//Material-UI Theme
+const theme = createMuiTheme({
+  palette: {
+      primary: {
+          main: '#009688'
+      },
+      secondary : {
+          main: '#78909c'
+      }
+  }
+});
+
 //FUNCTION App
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Feedback!</h1>
@@ -17,6 +34,7 @@ function App() {
 
       <FeedbackForm />
     </div>
+    </ThemeProvider>
   );
 }
 

@@ -5,6 +5,9 @@ import "./Support.css";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+//Material-UI
+import Button from "@material-ui/core/Button";
+import {TextField} from '@material-ui/core';
 
 //FUNCTION Support
 function Support() {
@@ -42,17 +45,19 @@ function Support() {
         <p>Please enter a number 0-5 with 0 being the worst and 5 being the best</p>
       </div>
       <div>
-        <input
+        <TextField
+        required
+          label="Support?"
           type="number"
           min="0"
           max="5"
-          placeholder="Support?"
+          placeholder="Do you feel supported?"
           id="support"
           value={support}
           onChange={(event) => setSupport(event.target.value)}
         />
-        <button onClick={handleSupport}>NEXT</button>
-        <button onClick={() => {history.goBack();}}>GO BACK</button>
+        <Button variant="contained" color="primary" onClick={handleSupport}>NEXT</Button>
+        <Button variant="outlined" color="primary" onClick={() => {history.goBack();}}>GO BACK</Button>
       </div>
     </>
   );

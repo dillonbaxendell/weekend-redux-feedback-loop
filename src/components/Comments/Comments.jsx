@@ -5,6 +5,9 @@ import "./Comments.css";
 import { useHistory } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import { useState } from "react";
+//Material-UI
+import Button from "@material-ui/core/Button";
+import {TextField} from '@material-ui/core';
 
 //FUNCTION Comments
 function Comments () {
@@ -31,22 +34,26 @@ function Comments () {
   return (
     <>
       <div>
-        <h1>Any Comments you want to leave?</h1>
+        <h1>Any comments you want to leave?</h1>
+        <p>Please leave us any additional feedback</p>
       </div>
       <div>
-        <input
+        <TextField
+          label="Comments"
           type="text"
           placeholder="Comments"
           id="comments"
           value={comments}
           onChange={(event) => setComments(event.target.value)}
         />
-        <button
+        <Button
+          variant="contained"
+          color="primary"
           onClick={handleComments}
         >
           NEXT
-        </button>
-        <button onClick={() => {history.goBack();}}>GO BACK</button>
+        </Button>
+        <Button variant="outlined" color="primary" onClick={() => {history.goBack();}}>GO BACK</Button>
       </div>
     </>
   );

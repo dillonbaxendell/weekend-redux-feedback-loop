@@ -5,6 +5,9 @@ import "./Feeling.css";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+//Material-UI
+import Button from "@material-ui/core/Button";
+import {TextField} from '@material-ui/core';
 
 //FUNCTION Feeling
 function Feeling() {
@@ -41,17 +44,19 @@ function Feeling() {
         <p>Please enter a number 0-5 with 0 being the worst and 5 being the best</p>
       </div>
       <div>
-        <input
+        <TextField
+        required
+          label="Feeling?"
           type="number"
           min="0"
           max="5"
-          placeholder="Feeling?"
+          placeholder="How are you feeling?"
           id="feeling"
           value={feeling}
           onChange={(event) => setFeeling(event.target.value)}
         />
-        <button onClick={handleFeeling}>NEXT</button>
-        <button onClick={() => {history.push('/');}}>GO BACK</button>
+        <Button variant="contained" color="primary" onClick={handleFeeling}>NEXT</Button>
+        <Button variant="outlined" color="primary" onClick={() => {history.push('/');}}>GO BACK</Button>
       </div>
     </>
   );
