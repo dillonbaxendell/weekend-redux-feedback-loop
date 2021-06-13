@@ -1,9 +1,6 @@
 //Import CSS
 import "./FeedbackForm.css";
 
-//Other imports
-import { useState } from "react";
-
 //Import components
 import Welcome from "../Welcome/Welcome";
 import Feeling from "../Feeling/Feeling";
@@ -20,24 +17,6 @@ import { Route, HashRouter as Router, useHistory } from "react-router-dom";
 
 //FUNCTION FeedbackForm
 function FeedbackForm() {
-  const [feeling, setFeeling] = useState("");
-  const [understanding, setUnderstanding] = useState("");
-  const [support, setSupport] = useState("");
-  const [comments, setComments] = useState("");
-
-  const clearInputs = () => {
-    setFeeling("");
-    setUnderstanding("");
-    setSupport("");
-    setComments("");
-  };
-
-  const newFeedback = {
-    feeling: feeling,
-    understanding: understanding,
-    support: support,
-    comments: comments,
-  };
 
   return (
     <>
@@ -47,22 +26,19 @@ function FeedbackForm() {
             <Welcome />
           </Route>
           <Route path="/feeling">
-            <Feeling feeling={feeling} setFeeling={setFeeling} />
+            <Feeling />
           </Route>
           <Route path="/understanding">
-            <Understanding
-              understanding={understanding}
-              setUnderstanding={setUnderstanding}
-            />
+            <Understanding />
           </Route>
           <Route path="/support">
-            <Support support={support} setSupport={setSupport} />
+            <Support />
           </Route>
           <Route path="/comments">
-            <Comments comments={comments} setComments={setComments} />
+            <Comments />
           </Route>
           <Route path="/review">
-            <Review newFeedback={newFeedback} clearInputs={clearInputs} />
+            <Review />
           </Route>
           <Route path="/thanks">
             <ThankYou />
